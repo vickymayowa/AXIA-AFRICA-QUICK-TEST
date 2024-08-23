@@ -3,32 +3,38 @@
 // to perform operations on its elements. The ternary operator is a concise way to write
 // conditional statements, and it can be used to manipulate array elements.
 
-// 2. Here are 5 common array methods:
-// - push(): adds one or more elements to the end of an array.
-// - pop(): removes the last element from an array.
-// - shift(): removes the first element from an array.
-// - unshift(): adds one or more elements to the beginning of an array.
-// - splice(): adds or removes elements from an array.
+// 2. Here are 5 array methods:
+// - filter(): creates a new array with all elements that pass the test implemented by the provided function.
+// - map(): creates a new array with the results of applying the provided function on every element in the calling array.
+// - reduce(): executes a user-supplied function on each element of the array (from left to right) so as to reduce it to a single output value.
+// - find(): returns the value of the first element in the array that satisfies the provided testing function.
+// - some(): returns true if at least one element in the array satisfies the provided testing function.
 
 // 3. Create dummy data and apply array methods
-const dummyData = [1, 2, 3, 4, 5];
+const dummyData = [
+  { id: 1, name: "John", age: 25 },
+  { id: 2, name: "Jane", age: 30 },
+  { id: 3, name: "Bob", age: 20 },
+  { id: 4, name: "Alice", age: 35 },
+  { id: 5, name: "Mike", age: 28 },
+];
 
-// Push: Add 6 to the end of the array
-dummyData.push(6);
-console.log("After push:", dummyData);
+// Filter: Get users older than 30
+const olderThan30 = dummyData.filter((user) => user.age > 30);
+console.log("Older than 30:", olderThan30);
 
-// Pop: Remove the last element from the array
-dummyData.pop();
-console.log("After pop:", dummyData);
+// Map: Get an array of user names
+const userNames = dummyData.map((user) => user.name);
+console.log("User Names:", userNames);
 
-// Shift: Remove the first element from the array
-dummyData.shift();
-console.log("After shift:", dummyData);
+// Reduce: Calculate the sum of user ages
+const sumOfAges = dummyData.reduce((acc, user) => acc + user.age, 0);
+console.log("Sum of Ages:", sumOfAges);
 
-// Unshift: Add 0 to the beginning of the array
-dummyData.unshift(0);
-console.log("After unshift:", dummyData);
+// Find: Get the first user with age 25
+const userWithAge25 = dummyData.find((user) => user.age === 25);
+console.log("User with Age 25:", userWithAge25);
 
-// Splice: Remove the element at index 2
-dummyData.splice(2, 1);
-console.log("After splice:", dummyData);
+// Some: Check if at least one user is older than 30
+const hasOlderThan30 = dummyData.some((user) => user.age > 30);
+console.log("Has Older than 30:", hasOlderThan30);
