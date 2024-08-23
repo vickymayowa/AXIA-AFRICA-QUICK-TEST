@@ -3,7 +3,7 @@
 // to perform operations on its elements. The ternary operator is a concise way to write
 // conditional statements, and it can be used to manipulate array elements.
 
-// 2. Here are 5 array methods:
+// 2. 
 // - filter(): creates a new array with all elements that pass the test implemented by the provided function.
 // - map(): creates a new array with the results of applying the provided function on every element in the calling array.
 // - reduce(): executes a user-supplied function on each element of the array (from left to right) so as to reduce it to a single output value.
